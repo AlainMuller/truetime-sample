@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TrueTime Sample</string>
+    <string name="tt_time_utc">TrueTime: %1$s [UTC]</string>
+    <string name="tt_time_gmt">TrueTime: %1$s [GMT+2]</string>
+    <string name="tt_time_pst">TrueTime: %1$s [PST]</string>
+    <string name="tt_time_device">Device Time: %1$s</string>
+</resources>
