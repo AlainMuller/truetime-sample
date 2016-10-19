@@ -17,6 +17,7 @@ build:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     #building
+    - chmod 755 ./gradlew
     - ./gradlew clean
     - ./gradlew assembleDebug
     
