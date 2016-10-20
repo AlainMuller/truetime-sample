@@ -28,5 +28,5 @@ script:
 
 after_failure:
   - echo "Dumping lint report out to console so it can be reviewed"
-  - echo "---truetime-sample"
-  - "cat /home/travis/build/AlainMuller/truetime-sample/app/build/lint-report.html"
+  - echo "===truetime-sample=== >RESULT<"
+  - "cat /home/travis/build/AlainMuller/truetime-sample/app/build/outputs/lint-results-debug.html"
