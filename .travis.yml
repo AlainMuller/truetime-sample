@@ -23,6 +23,7 @@ cache:
     - $HOME/.gradle/wrapper
 
 script:
+   - chmod 755 ./gradlew
    - ./gradlew clean assembleDebug test lint
 
 after_failure:
