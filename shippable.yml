@@ -21,11 +21,11 @@ build:
     - ./gradlew clean
     - ./gradlew assembleDebug
 
-  integrations:
-    notifications:
-      - integrationName: email
-        type: email
-          recipients:
-            - android@alainmuller.fr
-          on_success: change
-          on_failure: always
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        - android@alainmuller.fr
+      on_success: always
+      on_failure: always
