@@ -1,0 +1,31 @@
+language: android
+
+sudo: false
+
+jdk: oraclejdk8
+
+android:
+  components:
+    - platform-tools
+    - tools
+    - build-tools-24.0.3
+    - android-24
+    - extra-android-m2repository
+    - extra-android-support
+
+cache:
+  directories:
+    # gradle version from gradle-wrapper.properties
+    - $HOME/.gradle/caches/2.8
+    - $HOME/.gradle/caches/jars-1
+    - $HOME/.gradle/daemon
+    - $HOME/.gradle/native
+    - $HOME/.gradle/wrapper
+
+script:
+   - ./gradlew clean assembleDebug test lint
+
+after_failure:
+  - echo "Dumping lint report out to console so it can be reviewed"
+  - echo "---truetime-sample"
+  - "cat /home/travis/build/AlainMuller/truetime-sample/app/build/lint-report.html"
