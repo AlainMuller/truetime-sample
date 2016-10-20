@@ -20,12 +20,12 @@ build:
     - chmod 755 ./gradlew
     - ./gradlew clean
     - ./gradlew assembleDebug
-    
-integrations:
+
+  integrations:
     notifications:
-        - integrationName: email
-          type: email
+      - integrationName: email
+        type: email
           recipients:
             - android@alainmuller.fr
-          on_success: always
+          on_success: change
           on_failure: always
