@@ -26,7 +26,7 @@ script:
    - chmod 755 ./gradlew
    - ./gradlew clean assembleDebug test lint
 
-after_failure:
+after_script:
   - echo "Dumping lint report out to console so it can be reviewed"
   - echo "===truetime-sample=== >RESULT<"
   - "cat /home/travis/build/AlainMuller/truetime-sample/app/build/outputs/lint-results-debug.html"
